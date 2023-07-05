@@ -9,6 +9,10 @@
     "build": "spago build",
     "test": "spago test",
     "serve": "parcel dev/index.html --open",
+    "build:serve": "npm run build && npm run serve",
     "build-prod": "rm -rf prod && mkdir -p prod && cp dev/index.html prod/ && spago bundle-app --to prod/index.js && parcel build prod/index.html"
+  },
+  "dependencies": {
+    "purty": "^7.0.0"
   }
 }
